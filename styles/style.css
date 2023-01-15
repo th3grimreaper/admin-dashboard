@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sidebar-bgcol: #1992d4;
+  --sidebar-textcol: #ffffff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.large-icon-text {
+  font-size: 2rem;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bgcol);
+  color: var(--sidebar-textcol);
+  font-weight: 700;
+  padding: 1em;
+  display: grid;
+  gap: 2em;
+  grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+}
+
+.sidebar-grandchild {
+  display: flex;
+  gap: 1em;
+}
+
+.sidebar-grandchild + .sidebar-grandchild {
+  margin-top: 1em;
+}
+
+@media (min-width: 1000px) {
+}
