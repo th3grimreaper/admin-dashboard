@@ -9,6 +9,7 @@
   --sidebar-textcol: #ffffff;
   --maincont-searchbar-col: #e2e8f0;
   --shadow-col: rgba(0, 0, 0, 0.2);
+  --strip-col: #4f6418;
 }
 
 body {
@@ -30,12 +31,8 @@ body {
   font-weight: 700;
   padding: 1em 1.5em;
   display: flex;
-  gap: 2em;
+  gap: 3em;
   flex-direction: column;
-}
-
-.sidebar-child {
-  align-self: stretch;
 }
 
 .sidebar-grandchild {
@@ -45,7 +42,7 @@ body {
 }
 
 .sidebar-grandchild + .sidebar-grandchild {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 .header {
@@ -143,17 +140,35 @@ body {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2em;
   border-radius: 10px;
   background-color: var(--sidebar-textcol);
-  padding: 1em 2em;
+  padding: 2em;
   box-shadow: 4px 4px 5px var(--shadow-col);
   position: relative;
+}
+
+.card-text {
+  width: 80%;
+}
+
+.card-text .head {
+  font-weight: 700;
+}
+
+.card-icons {
+  display: flex;
+  gap: 1.5em;
+  margin-left: auto;
 }
 
 .card::before {
   position: absolute;
   content: '';
-  background-color: var(--sideplusbtn-bgcol);
+  background-color: var(--strip-col);
   width: 10px;
   height: 100%;
   top: 0;
