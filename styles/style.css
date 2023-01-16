@@ -7,8 +7,8 @@
 :root {
   --sideplusbtn-bgcol: #1992d4;
   --sidebar-textcol: #ffffff;
-  --searchbar-col: #e2e8f0;
-  --shadow-col: rgba(0, 0, 0, 0.5);
+  --maincont-searchbar-col: #e2e8f0;
+  --shadow-col: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -50,8 +50,10 @@ body {
 
 .header {
   display: flex;
+  background-color: var(--sidebar-textcol);
   flex-direction: column;
   box-shadow: 0 4px 5px var(--shadow-col);
+  z-index: 1;
 }
 
 .header-one {
@@ -71,6 +73,7 @@ body {
 }
 
 .btn-cont button {
+  font-weight: 700;
   padding: 0.5em 1.25em;
   border-style: none;
   border-radius: 25px;
@@ -99,7 +102,7 @@ body {
   width: max(40vw, 210px);
   border-radius: 50px;
   border-style: none;
-  background-color: var(--searchbar-col);
+  background-color: var(--maincont-searchbar-col);
   padding: 0.75em;
 }
 
@@ -113,14 +116,59 @@ body {
   height: 35px;
 }
 
+.user-name,
+.hello-user {
+  font-weight: 700;
+}
+
+.hello {
+  font-size: 12px;
+}
+
 .profile-cont {
   display: none;
+}
+
+.main-content {
+  background-color: var(--maincont-searchbar-col);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  margin: 1.5em;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: var(--sidebar-textcol);
+  padding: 1em 2em;
+  box-shadow: 4px 4px 5px var(--shadow-col);
+  position: relative;
+}
+
+.card::before {
+  position: absolute;
+  content: '';
+  background-color: var(--sideplusbtn-bgcol);
+  width: 10px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px 0 0 10px;
 }
 
 @media (min-width: 1160px) {
   .main-container {
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
+  }
+
+  .main-content {
+    grid-template-columns: 3fr 1fr;
   }
 
   .search {
@@ -175,7 +223,9 @@ body {
   }
 
   .hello-user {
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .btn-cont {
