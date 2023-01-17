@@ -10,6 +10,7 @@
   --maincont-searchbar-col: #e2e8f0;
   --shadow-col: rgba(0, 0, 0, 0.2);
   --strip-col: #86aa29;
+  --infotext-col: #636363;
 }
 
 body {
@@ -172,11 +173,12 @@ body {
 }
 
 .card-text {
-  width: 80%;
+  width: 90%;
 }
 
 .card-text .head {
   font-weight: 700;
+  margin-bottom: 0.5em;
 }
 
 .card-icons {
@@ -218,10 +220,30 @@ hr {
   position: absolute;
 }
 
+.trending-profile-cont {
+  font-size: 12px;
+  display: flex;
+  gap: 1em;
+}
+
+.trending-profile-cont + .trending-profile-cont {
+  margin-top: 2em;
+}
+
+.uid {
+  margin-bottom: 0.25em;
+}
+
+.desc,
+.info,
+.ustatus {
+  color: var(--infotext-col);
+}
+
 @media (min-width: 1160px) {
   .main-container {
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 6fr;
   }
 
   .main-content {
@@ -295,5 +317,9 @@ hr {
   .card-container,
   .side-card-container {
     margin: 5em 1.5em;
+  }
+
+  .side-card-container {
+    margin-left: 0;
   }
 }
