@@ -144,6 +144,7 @@ body {
 
 .side-card-container {
   gap: 5em;
+  margin-bottom: 2em;
 }
 
 .section-title {
