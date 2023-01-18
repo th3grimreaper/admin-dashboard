@@ -241,6 +241,45 @@ hr {
   color: var(--infotext-col);
 }
 
+@media (min-width: 700px) {
+  .header-one {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .profile-cont {
+    display: flex;
+    gap: 1em;
+  }
+  .right-icons {
+    flex-direction: row;
+    align-items: center;
+  }
+  .profile-img-container {
+    height: 50px;
+    width: 50px;
+  }
+
+  .profile-img-container img {
+    width: 100%;
+    border-radius: 50px;
+  }
+  .header-two {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-cont button {
+    padding: 0.75em 2em;
+  }
+  .btn-cont {
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+}
+
 @media (min-width: 1160px) {
   .main-container {
     grid-template-columns: 1fr 4fr;
@@ -264,55 +303,17 @@ hr {
 
   .header-one {
     grid-column: 1 / -1;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
   }
 
-  .right-icons {
-    flex-direction: row;
-    align-items: center;
-  }
   .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-  }
-
-  .header-two {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .profile-cont {
-    display: flex;
-    gap: 1em;
-  }
-
-  .profile-img-container {
-    height: 50px;
-    width: 50px;
-  }
-
-  .profile-img-container img {
-    width: 100%;
-    border-radius: 50px;
   }
 
   .hello-user {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  }
-
-  .btn-cont {
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-  }
-
-  .btn-cont button {
-    padding: 0.75em 2em;
   }
 
   .card-container,
